@@ -162,7 +162,7 @@ export default {
         aggregate: [
             { 
                 title: 'Order', 
-                description: '', 
+                description: 'order', 
                 key: 'orders', 
                 route: '/orders/orders',
                 ImageUrl: '',

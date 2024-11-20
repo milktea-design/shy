@@ -20,17 +20,21 @@ public class Order {
 
     private String orderId;
 
-    private String deviceModel;
-
     private String phoneNumber;
 
     private String userName;
+
+    @Embedded
+    private OrderStatus status;
 
     @PostPersist
     public void onPostPersist() {
         OrderPlaced orderPlaced = new OrderPlaced(this);
         orderPlaced.publishAfterCommit();
     }
+
+    @PrePersist
+    public void onPrePersist() {}
 
     public static OrderRepository repository() {
         OrderRepository orderRepository = OrderApplication.applicationContext.getBean(

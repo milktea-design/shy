@@ -21,45 +21,35 @@ public class PayController {
     PayRepository payRepository;
 
     @RequestMapping(
-        value = "/pays/{id}/pay",
-        method = RequestMethod.PUT,
+        value = "/pays/pay",
+        method = RequestMethod.POST,
         produces = "application/json;charset=UTF-8"
     )
     public Pay pay(
-        @PathVariable(value = "id") Long id,
-        @RequestBody PayCommand payCommand,
         HttpServletRequest request,
-        HttpServletResponse response
+        HttpServletResponse response,
+        @RequestBody PayCommand payCommand
     ) throws Exception {
         System.out.println("##### /pay/pay  called #####");
-        Optional<Pay> optionalPay = payRepository.findById(id);
-
-        optionalPay.orElseThrow(() -> new Exception("No Entity Found"));
-        Pay pay = optionalPay.get();
+        Pay pay = new Pay();
         pay.pay(payCommand);
-
         payRepository.save(pay);
         return pay;
     }
 
     @RequestMapping(
-        value = "/pays/{id}/cancel",
-        method = RequestMethod.PUT,
+        value = "/pays/cancel",
+        method = RequestMethod.POST,
         produces = "application/json;charset=UTF-8"
     )
     public Pay cancel(
-        @PathVariable(value = "id") Long id,
-        @RequestBody CancelCommand cancelCommand,
         HttpServletRequest request,
-        HttpServletResponse response
+        HttpServletResponse response,
+        @RequestBody CancelCommand cancelCommand
     ) throws Exception {
         System.out.println("##### /pay/cancel  called #####");
-        Optional<Pay> optionalPay = payRepository.findById(id);
-
-        optionalPay.orElseThrow(() -> new Exception("No Entity Found"));
-        Pay pay = optionalPay.get();
+        Pay pay = new Pay();
         pay.cancel(cancelCommand);
-
         payRepository.save(pay);
         return pay;
     }

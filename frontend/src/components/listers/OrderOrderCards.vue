@@ -9,7 +9,7 @@
             <v-row>
                 <v-list-item class="d-flex" style="background-color: white;">
                     <h1 class="align-self-center ml-3">Order</h1>
-                    <div class="secondary-text-color" style="margin-left:30px;"></div>
+                    <div class="secondary-text-color" style="margin-left:30px;">order</div>
                 </v-list-item>
             </v-row>
         </v-card>
@@ -105,9 +105,9 @@
             
             me.newValue = {
                 'orderId': '',
-                'deviceModel': '',
                 'phoneNumber': '',
                 'userName': '',
+                'status': '',
             }
         },
         methods:{

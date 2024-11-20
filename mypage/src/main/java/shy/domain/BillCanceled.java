@@ -10,4 +10,10 @@ import shy.infra.AbstractEvent;
 public class BillCanceled extends AbstractEvent {
 
     private Long id;
+    private String billId;
+    private String useYm;
+    private String userName;
+    private String phoneNumber;
+    private String billAmt;
+    private String billState;
 }

@@ -17,9 +17,9 @@
 
         <v-card-text style="background-color: white;">
             <String label="OrderId" v-model="value.orderId" :editMode="editMode" :inputUI="''"/>
-            <String label="DeviceModel" v-model="value.deviceModel" :editMode="editMode" :inputUI="''"/>
             <String label="PhoneNumber" v-model="value.phoneNumber" :editMode="editMode" :inputUI="''"/>
             <String label="UserName" v-model="value.userName" :editMode="editMode" :inputUI="''"/>
+            <OrderStatus offline label="Status" v-model="value.status" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions style="background-color: white;">

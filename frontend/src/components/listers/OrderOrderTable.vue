@@ -68,9 +68,9 @@
                 [
                     { text: "id", value: "id" },
                     { text: "orderId", value: "orderId" },
-                    { text: "deviceModel", value: "deviceModel" },
                     { text: "phoneNumber", value: "phoneNumber" },
                     { text: "userName", value: "userName" },
+                    { text: "status", value: "status" },
                 ],
             order : [],
             newValue: {},
@@ -89,9 +89,9 @@
 
             this.newValue = {
                 'orderId': '',
-                'deviceModel': '',
                 'phoneNumber': '',
                 'userName': '',
+                'status': '',
             }
         },
         methods: {

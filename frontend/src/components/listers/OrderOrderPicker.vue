@@ -18,13 +18,13 @@
                                 OrderId :  {{item.orderId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                DeviceModel :  {{item.deviceModel }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 PhoneNumber :  {{item.phoneNumber }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 UserName :  {{item.userName }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                Status :  {{item.status }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

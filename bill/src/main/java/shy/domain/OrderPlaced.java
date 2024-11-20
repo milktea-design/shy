@@ -9,5 +9,7 @@ import shy.infra.AbstractEvent;
 @ToString
 public class OrderPlaced extends AbstractEvent {
 
-    private Long id;
+    private String orderId;
+    private String phoneNumber;
+    private String userName;
 }
