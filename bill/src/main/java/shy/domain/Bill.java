@@ -135,5 +135,61 @@ public class Bill {
     }
     //>>> Clean Arch / Port Method
 
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getBillId() {
+        return this.billId;
+    }
+
+    public void setBillId(String billId) {
+        this.billId = billId;
+    }
+
+    public String getUseYm() {
+        return this.useYm;
+    }
+
+    public void setUseYm(String useYm) {
+        this.useYm = useYm;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getBillAmt() {
+        return this.billAmt;
+    }
+
+    public void setBillAmt(String billAmt) {
+        this.billAmt = billAmt;
+    }
+
+    public String getBillState() {
+        return this.billState;
+    }
+
+    public void setBillState(String billState) {
+        this.billState = billState;
+    }
+
 }
 //>>> DDD / Aggregate Root

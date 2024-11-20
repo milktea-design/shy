@@ -18,9 +18,6 @@
                                 OrderId :  {{item.orderId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                DeviceModel :  {{item.deviceModel }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 PhoneNumber :  {{item.phoneNumber }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>

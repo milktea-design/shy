@@ -105,7 +105,6 @@
             
             me.newValue = {
                 'orderId': '',
-                'deviceModel': '',
                 'phoneNumber': '',
                 'userName': '',
             }

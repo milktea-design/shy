@@ -127,5 +127,44 @@ public class MyPage {
     }
     //>>> Clean Arch / Port Method
 
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getHistId() {
+        return this.histId;
+    }
+
+    public void setHistId(String histId) {
+        this.histId = histId;
+    }
+
+    public String getContId() {
+        return this.contId;
+    }
+
+    public void setContId(String contId) {
+        this.contId = contId;
+    }
+
+    public String getWorkType() {
+        return this.workType;
+    }
+
+    public void setWorkType(String workType) {
+        this.workType = workType;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
 //>>> DDD / Aggregate Root

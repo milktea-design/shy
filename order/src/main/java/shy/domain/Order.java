@@ -20,8 +20,6 @@ public class Order {
 
     private String orderId;
 
-    private String deviceModel;
-
     private String phoneNumber;
 
     private String userName;
@@ -37,6 +35,38 @@ public class Order {
             OrderRepository.class
         );
         return orderRepository;
+    }
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
 //>>> DDD / Aggregate Root

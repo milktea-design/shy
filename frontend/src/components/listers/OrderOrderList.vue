@@ -50,7 +50,6 @@
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ DeviceModel :  {{data.deviceModel }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PhoneNumber :  {{data.phoneNumber }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserName :  {{data.userName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
@@ -121,7 +120,6 @@
             
             this.newValue = {
                 'orderId': '',
-                'deviceModel': '',
                 'phoneNumber': '',
                 'userName': '',
             }
