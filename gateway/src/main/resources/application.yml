@@ -50,21 +50,21 @@ spring:
     gateway:
       routes:
         - id: order
-          uri: http://order:8080
+          uri: http://order:8081
           predicates:
-            - Path=/orders/**, 
+            - Path=/order/**, 
         - id: bill
-          uri: http://bill:8080
+          uri: http://bill:8082
           predicates:
-            - Path=/bills/**, 
+            - Path=/bill/**, 
         - id: pay
-          uri: http://pay:8080
+          uri: http://pay:8083
           predicates:
-            - Path=/pays/**, 
+            - Path=/pay/**, 
         - id: mypage
-          uri: http://mypage:8080
+          uri: http://mypage:8084
           predicates:
-            - Path=/myPages/**, 
+            - Path=/myPage/**, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

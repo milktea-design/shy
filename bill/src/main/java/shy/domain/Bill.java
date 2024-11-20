@@ -55,13 +55,13 @@ public class Bill {
     public static void createBill(OrderPlaced orderPlaced) {
         //implement business logic here:
 
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         Bill bill = new Bill();
         repository().save(bill);
 
         BillCreated billCreated = new BillCreated(bill);
         billCreated.publishAfterCommit();
-        */
+        
 
         /** Example 2:  finding and process
         
@@ -83,13 +83,13 @@ public class Bill {
     public static void completeBill(BillPayed billPayed) {
         //implement business logic here:
 
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         Bill bill = new Bill();
         repository().save(bill);
 
         BillCompleted billCompleted = new BillCompleted(bill);
         billCompleted.publishAfterCommit();
-        */
+        
 
         /** Example 2:  finding and process
         
@@ -111,13 +111,13 @@ public class Bill {
     public static void cancelBill(BillCanceled billCanceled) {
         //implement business logic here:
 
-        /** Example 1:  new item 
+        /** Example 1:  new item */
         Bill bill = new Bill();
         repository().save(bill);
 
         BillCanceled billCanceled = new BillCanceled(bill);
         billCanceled.publishAfterCommit();
-        */
+        
 
         /** Example 2:  finding and process
         
