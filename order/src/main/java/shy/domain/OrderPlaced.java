@@ -1,4 +1,4 @@
-package shy.domain;
+cdpackage shy.domain;
 
 import java.time.LocalDate;
 import java.util.*;

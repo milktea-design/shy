@@ -57,5 +57,60 @@ public class Pay {
     }
     //>>> Clean Arch / Port Method
 
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPayId() {
+        return this.payId;
+    }
+
+    public void setPayId(String payId) {
+        this.payId = payId;
+    }
+
+    public String getBillId() {
+        return this.billId;
+    }
+
+    public void setBillId(String billId) {
+        this.billId = billId;
+    }
+
+    public String getUseYm() {
+        return this.useYm;
+    }
+
+    public void setUseYm(String useYm) {
+        this.useYm = useYm;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPayAmt() {
+        return this.payAmt;
+    }
+
+    public void setPayAmt(String payAmt) {
+        this.payAmt = payAmt;
+    }
+
+    public String getWorkType() {
+        return this.workType;
+    }
+
+    public void setWorkType(String workType) {
+        this.workType = workType;
+    }
 }
 //>>> DDD / Aggregate Root
