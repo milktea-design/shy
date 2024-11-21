@@ -37,6 +37,7 @@ public class OrderController {
         return order;
     }
 
+/*
     @RequestMapping(
     value = "/orders/health",
     method = RequestMethod.POST,
@@ -49,6 +50,11 @@ public class OrderController {
     ) throws Exception {
         System.out.println("##### /order/health  called #####");
         return 100;
+    }
+*/
+    @GetMapping(path = "/orders/health")
+    public String getHello() {
+        return "get Hello";
     }
 }
 //>>> Clean Arch / Inbound Adaptor
