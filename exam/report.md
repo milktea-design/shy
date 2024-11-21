@@ -30,6 +30,8 @@
 
 ### 클라우드 배포 역량
 
+![alt text](image-20.png)
+
 #### 클라우드 배포 - Container 운영
 
 생성한 application dockerizing
@@ -39,6 +41,33 @@
 ![alt text](image-2.png)
 
 container 배포
+
+##### azure pipeline 설정으로 CI 테스트
+
+![alt text](image-21.png)
+
+소스 repository에 commit이 발생하면 Pipeline trigger가 잘 작동하는지 테스트
+
+![alt text](image-22.png)
+
+![alt text](image-24.png)
+
+방금 커밋한 `608f385` git hash로 build trigger 됨을 확인함.
+
+![alt text](image-23.png)
+
+빌드 후 ACR에 이미지가 올라간 것 확인
+
+##### Pipeline CD 구성
+
+![alt text](image-25.png)
+
+위에서 생성한 Order-CI pipeline을 가지고 CD 구성 후 release 성공함
+
+
+### 컨테이너 인프라 설계 및 구성 역량
+
+-------------
 
 ##### load balancer 설정
 
@@ -52,11 +81,6 @@ kubectl expose deploy order --type=LoadBalancer --port=8080 --target-port=8080
 
 
 ```
-
-
-### 컨테이너 인프라 설계 및 구성 역량
-
--------------
 
 #### 컨테이너 자동확장 - HPA 
 
