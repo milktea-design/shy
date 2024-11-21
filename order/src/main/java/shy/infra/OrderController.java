@@ -19,5 +19,22 @@ public class OrderController {
 
     @Autowired
     OrderRepository orderRepository;
+
+    @RequestMapping(
+        value = "/orders/placeorder",
+        method = RequestMethod.POST,
+        produces = "application/json;charset=UTF-8"
+    )
+    public Order placeOrder(
+        HttpServletRequest request,
+        HttpServletResponse response,
+        @RequestBody PlaceOrderCommand placeOrderCommand
+    ) throws Exception {
+        System.out.println("##### /order/placeOrder  called #####");
+        Order order = new Order();
+        order.placeOrder(placeOrderCommand);
+        orderRepository.save(order);
+        return order;
+    }
 }
 //>>> Clean Arch / Inbound Adaptor

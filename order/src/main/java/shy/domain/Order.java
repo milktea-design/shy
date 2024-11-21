@@ -42,5 +42,15 @@ public class Order {
         );
         return orderRepository;
     }
+
+    //<<< Clean Arch / Port Method
+    public void placeOrder(PlaceOrderCommand placeOrderCommand) {
+        //implement business logic here:
+
+        OrderPlaced orderPlaced = new OrderPlaced(this);
+        orderPlaced.publishAfterCommit();
+    }
+    //>>> Clean Arch / Port Method
+
 }
 //>>> DDD / Aggregate Root
