@@ -36,5 +36,19 @@ public class OrderController {
         orderRepository.save(order);
         return order;
     }
+
+    @RequestMapping(
+    value = "/orders/health",
+    method = RequestMethod.POST,
+    produces = "application/json;charset=UTF-8"
+    )
+    public int health(
+        HttpServletRequest request,
+        HttpServletResponse response
+        // @RequestBody PlaceOrderCommand placeOrderCommand
+    ) throws Exception {
+        System.out.println("##### /order/health  called #####");
+        return 100;
+    }
 }
 //>>> Clean Arch / Inbound Adaptor
