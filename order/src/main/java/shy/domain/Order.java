@@ -24,11 +24,17 @@ public class Order {
 
     private String userName;
 
+    @Embedded
+    private OrderStatus status;
+
     @PostPersist
     public void onPostPersist() {
         OrderPlaced orderPlaced = new OrderPlaced(this);
         orderPlaced.publishAfterCommit();
     }
+
+    @PrePersist
+    public void onPrePersist() {}
 
     public static OrderRepository repository() {
         OrderRepository orderRepository = OrderApplication.applicationContext.getBean(
@@ -37,36 +43,15 @@ public class Order {
         return orderRepository;
     }
 
-    public Long getId() {
-        return this.id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    //<<< Clean Arch / Port Method
+    public void placeOrder(PlaceOrderCommand placeOrderCommand) {
+        //implement business logic here:
 
-    public String getOrderId() {
-        return this.orderId;
+        OrderPlaced orderPlaced = new OrderPlaced(this);
+        orderPlaced.publishAfterCommit();
     }
+    //>>> Clean Arch / Port Method
 
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
-    }
-
-    public String getPhoneNumber() {
-        return this.phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 }
 //>>> DDD / Aggregate Root

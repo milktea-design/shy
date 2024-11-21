@@ -23,6 +23,9 @@
                             <v-list-item-subtitle>
                                 UserName :  {{item.userName }}
                             </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                Status :  {{item.status }}
+                            </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>

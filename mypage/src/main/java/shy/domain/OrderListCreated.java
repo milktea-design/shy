@@ -12,6 +12,10 @@ import shy.infra.AbstractEvent;
 public class OrderListCreated extends AbstractEvent {
 
     private Long id;
+    private String histId;
+    private String contId;
+    private String workType;
+    private String description;
 
     public OrderListCreated(MyPage aggregate) {
         super(aggregate);

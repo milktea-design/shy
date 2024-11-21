@@ -14,6 +14,7 @@
             <div>
                 <String label="UserName" v-model="item.userName" :editMode="editMode" @change="change" />
             </div>
+            <OrderStatus offline label="Status" v-model="item.status" :editMode="false" :key="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

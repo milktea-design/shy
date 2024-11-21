@@ -14,13 +14,13 @@ public class PayHateoasProcessor
     public EntityModel<Pay> process(EntityModel<Pay> model) {
         model.add(
             Link
-                .of(model.getRequiredLink("self").getHref() + "/pay")
-                .withRel("pay")
+                .of(model.getRequiredLink("self").getHref() + "//pay")
+                .withRel("/pay")
         );
         model.add(
             Link
-                .of(model.getRequiredLink("self").getHref() + "/cancel")
-                .withRel("cancel")
+                .of(model.getRequiredLink("self").getHref() + "//cancel")
+                .withRel("/cancel")
         );
 
         return model;

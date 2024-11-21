@@ -70,6 +70,7 @@
                     { text: "orderId", value: "orderId" },
                     { text: "phoneNumber", value: "phoneNumber" },
                     { text: "userName", value: "userName" },
+                    { text: "status", value: "status" },
                 ],
             order : [],
             newValue: {},
@@ -90,6 +91,7 @@
                 'orderId': '',
                 'phoneNumber': '',
                 'userName': '',
+                'status': '',
             }
         },
         methods: {

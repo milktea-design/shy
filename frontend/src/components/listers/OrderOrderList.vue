@@ -52,6 +52,7 @@
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PhoneNumber :  {{data.phoneNumber }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserName :  {{data.userName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -122,6 +123,7 @@
                 'orderId': '',
                 'phoneNumber': '',
                 'userName': '',
+                'status': '',
             }
         },
         methods: {

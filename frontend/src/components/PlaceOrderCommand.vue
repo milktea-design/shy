@@ -1,13 +1,15 @@
 <template>
     <v-card outlined>
         <v-card-title>
-            Order
+            PlaceOrder
         </v-card-title>
 
         <v-card-text>
-            <String label="OrderId" v-model="value.orderId" :editMode="editMode"/>
+            <Number label="Id" v-model="value.id" :editMode="editMode"/>
             <String label="PhoneNumber" v-model="value.phoneNumber" :editMode="editMode"/>
             <String label="UserName" v-model="value.userName" :editMode="editMode"/>
+            <String label="OrderId" v-model="value.orderId" :editMode="editMode"/>
+            <OrderStatus offline label="Status" v-model="value.status" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
@@ -15,9 +17,9 @@
             <v-btn
                     color="primary"
                     text
-                    @click="order"
+                    @click="placeOrder"
             >
-                Order
+                PlaceOrder
             </v-btn>
             
             <v-btn
@@ -35,7 +37,7 @@
 <script>
    
     export default {
-        name: 'OrderCommand',
+        name: 'PlaceOrderCommand',
         components:{},
         props: {},
         data: () => ({
@@ -43,15 +45,17 @@
             value: {},
         }),
         created() {
-            this.value.orderId = '';
+            this.value.id = 0;
             this.value.phoneNumber = '';
             this.value.userName = '';
+            this.value.orderId = '';
+            this.value.status = {};
         },
         watch: {
         },
         methods: {
-            order() {
-                this.$emit('order', this.value);
+            placeOrder() {
+                this.$emit('placeOrder', this.value);
             },
             close() {
                 this.$emit('closeDialog');
