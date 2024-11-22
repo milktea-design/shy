@@ -149,6 +149,23 @@ kubectl logs -l app=config
 
 #### 클라우드스토리지 활용 - PVC 
 
+order서비스의 `deployment.yaml`에 container spec - volume 추가
+
+![alt text](image-35.png)
+
+Persistence Volume Claim - `azureFile` 생성 
+
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+이후 order service pod에서 pvc에 접근하여 파일 생성
+
+![alt text](image-34.png)
+
+다른 pod에서도 pvc의 파일이 접근 가능함.
+![alt text](image-33.png)
+
 #### 셀프 힐링/무정지배포 - Liveness/Rediness Probe 
 
 ##### health check용 간단한 method 생성
