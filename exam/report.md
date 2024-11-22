@@ -26,13 +26,16 @@ https://www.msaez.io/#/188538207/storming/shy
 
 Choreography 방식 적용
 
+
+
+
+#### 분산트랜잭션 - Saga
+
+데이터의 일관성 및 보상처리 가능
+
+Choreography 방식 적용
+
 #### 분산 데이터 프로젝션 - CQRS 
-
-![alt text](image-28.png)
-
----------
-
-MSA - 수납
 
 ![alt text](image-26.png)
 
