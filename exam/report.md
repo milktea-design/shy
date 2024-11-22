@@ -16,9 +16,7 @@ https://www.msaez.io/#/188538207/storming/shy
 
 ## 클라우드 네이티브 개발 MSA (Dev)
 
-### MSA 개발 또는 개발관리 역량
-
-#### `SAGA-Choreography`
+###  `SAGA-Choreography`
 
 분산 트랜잭션 처리를 위한 Saga Pattern 적용
 
@@ -26,21 +24,18 @@ https://www.msaez.io/#/188538207/storming/shy
 
 Choreography 방식 적용
 
+![alt text](image-30.png)
 
+#### `내 서비스에서의 compensation`
 
+![alt text](image-29.png)
 
-#### 분산트랜잭션 - Saga
-
-데이터의 일관성 및 보상처리 가능
-
-Choreography 방식 적용
 
 #### 분산 데이터 프로젝션 - CQRS 
 
+![alt text](image-28.png)
+
 ![alt text](image-26.png)
-
-
-
 
 
 ## 클라우드 네이티브 운영 (Ops, PaaS)
@@ -51,14 +46,6 @@ Choreography 방식 적용
 ![alt text](image-20.png)
 
 #### 클라우드 배포 - Container 운영
-
-생성한 application dockerizing
-
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
-container 배포
 
 ##### azure pipeline 설정으로 CI 테스트
 
